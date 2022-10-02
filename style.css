@@ -1,0 +1,68 @@
+
+/* everthing is set to border box */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body
+{
+    background-color: #748d97;
+}
+
+#heading h1
+{
+    font-size: 40px;
+    color: #e82c17;
+}
+
+#container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+}
+
+.timer
+{
+    display: flex;
+    line-height: 1;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.buttons
+{
+    display: flex;
+}
+
+/* for each button */
+.buttons button
+{
+    margin: 20px;
+    height: 50px;
+    width: 100px;
+    background-color: #0a3fef;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    border:1px solid #0a3fef;
+}
+
+/* on button hover */
+.buttons button:hover
+{
+    background-color:transparent;
+    color:#0a3fef;
+}
+
+/* when the width of the device screen is small */
+@media screen and (max-width:500px) {
+    .buttons
+    {
+        flex-direction: column;
+    }
+  }
+
