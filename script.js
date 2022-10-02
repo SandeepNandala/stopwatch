@@ -109,6 +109,7 @@ stopTimerEl.addEventListener('click',(event)=>{
     flag=true;//setting the flag to true so user can start timer again
 })
 
+// when a user clicks the reset button the timer will stop and reset the timer to zero
 resetTimerEl.addEventListener('click',(event)=>{
     clearInterval(timer);//clearing the timer setInterval
     milsEle.innerText="00";//restting the milliseconds
