@@ -102,15 +102,15 @@ function startTimer(event)
 startTimerEl.addEventListener('click',startTimer);
 
 
-//when a user clicks the stop button the timer will stop.
-stopTimerEl.addEventListener('click',(event)=>{
+function stopTimer(event)
+{
     clearInterval(timer);//clearing the timer setInterval
     event.stopPropagation();
-    flag=true;//setting the flag to true so user can start timer again
-})
+    flag=true;//setting the flag to true so user can start timer again   
+}
 
-// when a user clicks the reset button the timer will stop and reset the timer to zero
-resetTimerEl.addEventListener('click',(event)=>{
+function resetTimer(event)
+{
     clearInterval(timer);//clearing the timer setInterval
     milsEle.innerText="00";//restting the milliseconds
     secEle.innerText="00";//resetting the seconds element
@@ -118,4 +118,9 @@ resetTimerEl.addEventListener('click',(event)=>{
     event.stopPropagation();
     flag=true;//setting the flag to true so user can start timer again
     
-})
+}
+//when a user clicks the stop button the timer will stop.
+stopTimerEl.addEventListener('click',stopTimer);
+
+//when a user clicks the reset button the timer will stop and set it to zero
+resetTimerEl.addEventListener('click',resetTimer);
